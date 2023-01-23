@@ -1,5 +1,3 @@
-import '@styles/reset.scss'
-import '@styles/base.scss'
 import { RecoilRoot } from 'recoil'
 import type { AppProps } from 'next/app'
 import CssBaseline from '@mui/material/CssBaseline'
