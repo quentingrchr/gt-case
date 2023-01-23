@@ -1,8 +1,3 @@
-/* 
-Import and export all your utils functions here :
-    import MyFunction from './my-function'
-*/
-
-export {
-  
-}
+import isFarmType from './is-farm-type'
+import isProductType from './is-product-type'
+export { isFarmType, isProductType }

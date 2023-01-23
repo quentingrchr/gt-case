@@ -1,8 +1,3 @@
-/* 
-Import and export all your hooks here :
-    import myHook from './my-hook'
-*/
+import useSubscribeCollection from './use-subscribe-collection'
 
-export {
-  
-}
+export { useSubscribeCollection }

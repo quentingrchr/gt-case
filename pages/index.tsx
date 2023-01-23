@@ -1,12 +1,16 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-
+import { Panel } from '@components'
+import { Stack } from '@mui/system'
 const Home: NextPage = () => {
-  return (<>
+  return (
+    <>
       <Head>
-        <title> Simple title </title>
+        <title> Greenshield Technology Case</title>
       </Head>
-      <h1>Hello world</h1>
+      <Stack direction="column" justifyContent="flex-start" alignItems="center">
+        <Panel />
+      </Stack>
     </>
   )
 }

@@ -1,17 +1,18 @@
 import '@styles/reset.scss'
 import '@styles/base.scss'
-import { useEffect, useState, useRef } from 'react'
 import { RecoilRoot } from 'recoil'
 import type { AppProps } from 'next/app'
-import { useRouter } from 'next/router'
-import { Nav } from '@components'
+import CssBaseline from '@mui/material/CssBaseline'
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp(props: AppProps) {
+  const { Component, pageProps } = props
+
   return (
     <>
-        <RecoilRoot>
-          <Component {...pageProps} />
-        </RecoilRoot>
+      <RecoilRoot>
+        <CssBaseline />
+        <Component {...pageProps} />
+      </RecoilRoot>
     </>
   )
 }

@@ -1,2 +1,7 @@
 // declare and export your ts types here
-export {}
+import { FarmType } from './farm.type'
+import { GeoPointType } from './geo-point.type'
+import { ProductType } from './product.type'
+import { CollectionNameType } from './collection-name.type'
+
+export type { FarmType, GeoPointType, ProductType, CollectionNameType }
