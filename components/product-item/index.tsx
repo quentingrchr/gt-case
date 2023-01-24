@@ -31,13 +31,14 @@ const ProductItem = ({
 
   async function handleEdit() {
     if (isEditing) {
-      if (newAlias === alias) return
-      try {
-        await updateDoc(doc(db, 'products', id), {
-          alias: newAlias,
-        })
-      } catch (error) {
-        alert('Error updating product')
+      if (newAlias !== alias) {
+        try {
+          await updateDoc(doc(db, 'products', id), {
+            alias: newAlias,
+          })
+        } catch (error) {
+          alert('Error updating product')
+        }
       }
       setIsEditing(!isEditing)
     } else if (!isEditing) {
