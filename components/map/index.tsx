@@ -3,7 +3,7 @@ import { MarkerType } from '@types'
 import mapboxgl from 'mapbox-gl'
 import { Marker } from 'mapbox-gl'
 
-mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN || ''
+mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_PUBLIC_KEY || ''
 
 const generateNewMarker = ({ markerData }: { markerData: MarkerType }) => {
   const {
