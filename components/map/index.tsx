@@ -22,8 +22,8 @@ const Map = ({ markersData }: PropsType) => {
   const mapContainer = useRef<any>(null)
   const map = useRef<mapboxgl.Map | null>(null)
   const mapMarkers = useRef<mapboxgl.Marker[]>([])
-  const [lng, setLng] = useState(4.1111)
-  const [lat, setLat] = useState(43.58)
+  const [lng, setLng] = useState(-0.3435314023816621)
+  const [lat, setLat] = useState(45.73257306794853)
   const [zoom, setZoom] = useState(9)
 
   const displayMarkersOnMap = () => {
