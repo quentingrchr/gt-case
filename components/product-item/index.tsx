@@ -8,6 +8,7 @@ import {
   TextField,
   InputAdornment,
 } from '@mui/material'
+
 import { Stack } from '@mui/system'
 import BadgeIcon from '@mui/icons-material/Badge'
 import db from '../../firebase/store'
@@ -17,7 +18,14 @@ export type PropsType = {
   product: ProductType
 }
 
-const ProductItem = ({ product: { id, name, alias } }: PropsType) => {
+const ProductItem = ({
+  product: {
+    id,
+    name,
+    alias,
+    location: { _lat, _long },
+  },
+}: PropsType) => {
   const [isEditing, setIsEditing] = useState(false)
   const [newAlias, setNewAlias] = useState(alias)
 
@@ -42,6 +50,9 @@ const ProductItem = ({ product: { id, name, alias } }: PropsType) => {
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {name}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {`${_lat} / ${_long}`}
         </Typography>
         <Stack direction="row" alignItems={'center'} spacing={2}>
           <TextField
